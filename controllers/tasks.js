@@ -65,7 +65,7 @@ const deleteTask = async (req, res) => {
   if (!task) {
     return res.status(404).json({ msg: `Task with id ${id} is not found` });
   }
-  res.json({ msg: "Task deleted" });
+  res.status(200).json({ msg: "Task deleted" });
 };
 
 module.exports = { getAllTasks, createTask, getTask, updateTask, deleteTask };
